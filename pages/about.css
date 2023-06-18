@@ -6,9 +6,10 @@
 
 .banner{
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(image_elements/compsci_background.jpg);
+    height: 150vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../image_elements/compsci_background.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
 
 }
@@ -23,10 +24,9 @@
     background-color: black;
 }
 
-
 .profile{
-    width: 250px;
-    border-radius: 125px;
+    width: 300px;
+    border-radius: 150px;
     cursor: pointer;
 }
 
@@ -59,10 +59,11 @@
 }
 
 .content{
-    width: 100%;
+    width: 80%;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
 }
@@ -74,8 +75,9 @@
 
 .content p{
     margin: 20px auto;
+    font-size: 40px;
     font-weight: 100;
-    line-height: 25px;
+    line-height: 1.5;
 }
 
 button{
@@ -104,6 +106,7 @@ span{
     z-index: -1;
     transition: 0.5s;
 }
+
 button:hover span{
     width: 100%;
 }
