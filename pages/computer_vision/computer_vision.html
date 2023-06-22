@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="vision.css">
+</head>
+<body>
+
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about_me/about_me.html">About Me</a></li>
+                <li><a href="../data_analysis/data_analysis.html">Data Analysis</a></li>
+                <li><a href="../data_mining/data_mining.html">Data Mining</a></li>
+                <li><a href="../image_comprehension/image_compression.html">Image Compression</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+
+            <div>
+                <h1>Software Development</h1>
+                <p>
+                    This project was a collaborative group effort written in c++. Together me 
+                    and my three parteners made the canny edge detection filter.
+                </p>
+            </div>
+
+            <div>
+                <h1>Canny Edge Detection: An Overview</h1>
+                <p>
+                    Canny Edge Detection is a sophisticated computer vision algorithm designed 
+                    to extract sharp edges from an image while disregarding other details. The 
+                    algorithm produces the following output:
+                </p>
+
+                <img src="input.jpg" class="asset">
+                <img src="output.jpg" class="asset">
+            </div>
+
+            <div>
+                <h1>Implementation Details</h1>
+                <p>
+                    The Canny edge detection algorithm involves applying a series of carefully 
+                    chosen filters that work in tandem to achieve the desired output. These 
+                    filters include:
+                </p>
+                <ul>
+                    <li>
+                        <b>Grayscale Conversion:</b>The grayscale filter transforms a color 
+                        image into grey by converting each pixel's color value into a 
+                        corresponding gray intensity value. This step is crucial because it 
+                        simplifies the image to a single color channel, making it easier to 
+                        detect edges based on intensity variations.
+                    </li>
+
+                    <li>
+                        <b>Gaussian Blur:</b>The Gaussian blur filter applies a blur to the 
+                        grayscale image using a Gaussian kernel. This blurring process reduces 
+                        noise and smoothens the image, which helps to eliminate small 
+                        fluctuations in intensity that could be mistaken for edges. The amount 
+                        of blurring is controlled by the size of the kernel and the standard 
+                        deviation parameter.
+                    </li>
+
+                    <li>
+                        <b>Sobel Operator:</b>The Sobel operator is an edge-detection filter 
+                        that calculates the gradient of the grayscale image in both the 
+                        horizontal and vertical directions. It highlights regions of rapid 
+                        intensity changes, representing potential edges. By computing the 
+                        gradient magnitude and direction, the Sobel operator identifies the 
+                        strength and orientation of edges in the image.
+                    </li>
+
+                    <li>
+                        <b>Double Thresholding:</b>Double thresholding is a technique where 
+                        the image is segmented into different intensity regions based on two 
+                        threshold values: a high threshold and a low threshold. Pixels with 
+                        intensity values above the high threshold are considered strong edges,
+                        while those below the low threshold are regarded as non-edges. Pixels 
+                        with values between the two thresholds are classified as weak edges.
+                    </li>
+
+                    <li>
+                        <b>Hysteresis Thresholding:</b>Hysteresis thresholding is the final 
+                        step in the Canny edge detection process. It aims to refine the edges 
+                        obtained from double thresholding by connecting and preserving only 
+                        the strong edges while suppressing weak or noisy edges. It achieves 
+                        this by analyzing the connectivity between pixels and determining if 
+                        they form continuous edge contours.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h1>Getting Started</h1>
+                <p>
+                    To utilize this code for applying Canny edge detection to your own images, 
+                    follow the steps below:
+                </p>
+
+                <ul>
+                    <li>Clone the repository: git clone https://github.com/Dan-Swarts/Canny_Edge_Detection.git</li>
+
+                    <li>Compile the code using the provided makefile: make</li>
+
+                    <li>Place your input image in the "images" folder within this repository</li>
+
+                    <li>Run the script: ./image_processor input.jpg canny-edge-detect output.jpg</li>
+
+                    <li>You are free to use any image of your choice</li>
+
+                    <li>
+                        Please note that this implementation assumes you have a basic understanding 
+                        of computer vision concepts and have the necessary environment set up to run 
+                        the code. Ensure that the required dependencies are installed and configured 
+                        properly.
+                    </li>
+                </ul>
+
+                <p></p>
+            </div>
+            
+            
+            
+            <div>
+                <a href="https://github.com/Dan-Swarts/Canny_Edge_Detection" target="_blank">
+                    <button type="button"><span></span>See the Code on github</button>
+                </a>
+
+                <a href="../../index.html">
+                    <button type="button"><span></span>More projects</button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="mining.css">
+</head>
+<body>
+
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about_me/about_me.html">About Me</a></li>
+                <li><a href="../computer_vision/computer_vision.html">Computer Vision</a></li>
+                <li><a href="../data_analysis/data_analysis.html">Data Analysis</a></li>
+                <li><a href="../image_comprehension/image_compression.html">Image Compression</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+
+            <div>
+                <h1>Handling Big Data</h1>
+                <P>
+                    When dealing with large datasets, consisting of billions or even trillions of 
+                    records, conventional software practices fall short. Simple operations can take 
+                    years to complete, and a single failure can result in significant setbacks. In 
+                    this project, I leveraged a Big Data framework to process an enormous dataset 
+                    and identify similar businesses.
+                </P>
+            </div>
+
+            <div>
+                <h1>Introduction to a Robust Framework</h1>
+                <P>
+                    The Big Data framework I employed is Apache Spark, specifically utilizing its 
+                    Resilient Distributed Datasets (RDDs). Apache Spark RDDs possess the following 
+                    distinctive properties: 
+                </p>
+
+                <ul>
+                    <li>Distributed: RDDs are distributed across multiple nodes in a cluster, 
+                        enabling parallel processing and fault tolerance.</li>
+                    <li>Resilient: RDDs are resilient to failures. If a node in the cluster fails, 
+                        RDDs can be reconstructed using lineage information and data stored on 
+                        other nodes.</li>
+                    <li>Partitioned: RDDs are divided into partitions, which are logical divisions 
+                        of data stored on different nodes. Partitioning allows for parallel processing 
+                        and distributed operations on the data.</li>
+                </ul>
+
+
+                <img src="rdd_diagram.png" class="asset">
+
+                <p>
+                    This framework necessitated meticulous management of workers and the accumulator 
+                    responsible for aggregating their operations.
+                </p>
+            </div>
+
+            <div>
+                <h1>Minhashing Technique</h1>
+                <p>
+                    Beyond querying the framework, I delved into more advanced algorithms such as SON 
+                    and minhashing. Minhashing employs a series of hash functions to create a 
+                    signature "mask," which estimates the Jaccard similarity between different reviews.
+                    This approach enabled me to process vast amounts of data within remarkably short 
+                    timeframes.
+                </p>
+
+                <img src="Min_hashing_example.png" class="asset">
+            </div>
+
+            <div>
+                <h1>SON algorithm</h1>
+                <p>
+                    The SON algorithm is used to find frequently occurring groups of items in big datasets. 
+                    It works in two steps: first, each node checks its part of the data to find local 
+                    frequent itemsets. Then, the results are combined to find the global frequent itemsets. 
+                    The algorithm is good at handling large datasets and can be used to discover patterns in 
+                    areas like shopping habits and recommendations.
+                </p>
+                <img src="son.png" class="asset">
+            </div>
+
+            <div>
+
+                <a href="https://github.com/Dan-Swarts/Big_Data" target="_blank">
+                    <button type="button"><span></span>See the Code on github</button>
+                </a>
+
+                <a href="../../index.html">
+                    <button type="button"><span></span>More projects</button>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
