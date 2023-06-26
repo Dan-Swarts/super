@@ -68,6 +68,11 @@
     color: #fff;
 }
 
+.highlight{
+    color: yellow;
+    font-weight: bold;
+}
+
 .content h1{
     font-size: 70px;
     margin-top: 80px;
