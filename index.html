@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
-    <div class="banner">
+    <div id="content">
+
         <div class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,23 +19,31 @@
             </ul>
         </div>
 
-        <div class="content">
+        <div class="text_home">
+
             <img src="image_elements/professional portrait (2).jpg" class="profile">
+
             <h1>DANIEL SWARTS</h1>
             <P>Welcome to my Website! <br>I'm thrilled to connect with professionals 
             like you in the dynamic world of data science, machine learning, and software development.<br>
-            have a look around and see some of the work I've done.</P>        
-            <div>
-                <a href="resume.docx" download>
-                    <button type="button"><span></span>Download Resume</button>
-                </a>
+            have a look around and see some of the work I've done.</P>  
 
-                <a href="https://www.linkedin.com/in/daniel-swarts/" target="_blank">
-                    <button type="button"><span></span>Linkedin</button>
-                </a>
-            </div>
         </div>
+
+        <div class="bubbles">
+            <a href="resume.docx" download>
+                <button type="button_home"><span></span>Download Resume</button>
+            </a>
+
+            <a href="https://www.linkedin.com/in/daniel-swarts/" target="_blank">
+                <button type="button_home"><span></span>Linkedin</button>
+            </a>
+        </div>
+
+            
     </div>
-    
+
+
+    <script src="script.js"></script>
 </body>
 </html>
