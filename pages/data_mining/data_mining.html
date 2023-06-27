@@ -6,6 +6,7 @@
 <body>
 
     <div class="content">
+
         <div class="navbar">
             <ul>
                 <li><a href="../../index.html">Home</a></li>
@@ -20,73 +21,64 @@
 
         <div class="text">
 
-            <div>
-                <h1>Handling Big Data</h1>
-                <p>
-                    In this project, I was given a massive dataset; dozens of megabytes. I had to write
-                    code which would process all of this data on a very slow machine in a short timeframe,
-                    and return similar itemsets.
-                </p>
-                <P>
-                    When dealing with large datasets, consisting of billions or even trillions of 
-                    records, conventional software practices fall short. Simple operations can take 
-                    years to complete, and a single failure can result in significant setbacks. to 
-                    complete this project, I leveraged a Big Data framework to process and identify similar items.
-                </P>
-            </div>
+            <h1>Handling Big Data</h1>
 
-            <div>
-                <h1>Introduction to a Robust Framework</h1>
-                <P>
-                    The Big Data framework I employed is Apache Spark, specifically utilizing its 
-                    Resilient Distributed Datasets (RDDs). Apache Spark RDDs possess the following 
-                    distinctive properties: 
-                </p>
+            <p>In this project, I was given a massive dataset; dozens of megabytes. I had to write
+            code which would process all of this data on a very slow machine in a short time frame,
+            and return similar item sets.</p>
+            
+            <P>When dealing with large datasets, consisting of billions or even trillions of 
+            records, conventional software practices fall short. Simple operations can take 
+            years to complete, and a single failure can result in significant setbacks. to 
+            complete this project, I leveraged a Big Data framework to process and identify 
+            similar items.</P>
 
-                <ul>
-                    <li>Distributed: RDDs are distributed across multiple nodes in a cluster, 
-                        enabling parallel processing and fault tolerance.</li>
-                    <li>Resilient: RDDs are resilient to failures. If a node in the cluster fails, 
-                        RDDs can be reconstructed using lineage information and data stored on 
-                        other nodes.</li>
-                    <li>Partitioned: RDDs are divided into partitions, which are logical divisions 
-                        of data stored on different nodes. Partitioning allows for parallel processing 
-                        and distributed operations on the data.</li>
-                </ul>
+           
+            <h1>Introduction to a Robust Framework</h1>
+
+            <P>The Big Data framework I employed is Apache Spark, specifically utilizing its 
+            Resilient Distributed Datasets (RDDs). Apache Spark RDDs possess the following 
+            distinctive properties: </p>
+
+            <ul>
+                <li>Distributed: RDDs are distributed across multiple nodes in a cluster, 
+                enabling parallel processing and fault tolerance.</li>
+
+                <li>Resilient: RDDs are resilient to failures. If a node in the cluster fails, 
+                RDDs can be reconstructed using lineage information and data stored on 
+                other nodes.</li>
+
+                <li>Partitioned: RDDs are divided into partitions, which are logical divisions 
+                of data stored on different nodes. Partitioning allows for parallel processing 
+                and distributed operations on the data.</li>
+            </ul>
 
 
-                <img src="rdd_diagram.png" class="image">
+            <img src="rdd_diagram.png" class="image">
 
-                <p>
-                    This framework necessitated meticulous management of workers and the accumulator 
-                    responsible for aggregating their operations.
-                </p>
-            </div>
+            <p>This framework necessitated meticulous management of workers and the accumulator 
+            responsible for aggregating their operations.</p>
+           
+            <h1>Minhashing Technique</h1>
 
-            <div>
-                <h1>Minhashing Technique</h1>
-                <p>
-                    Beyond querying the framework, I delved into more advanced algorithms such as SON 
-                    and minhashing. Minhashing employs a series of hash functions to create a 
-                    signature "mask," which estimates the Jaccard similarity between different reviews.
-                    This approach enabled me to process vast amounts of data within remarkably short 
-                    timeframes.
-                </p>
+            <p>Beyond querying the framework, I delved into more advanced algorithms such as SON 
+            and minhashing. Minhashing employs a series of hash functions to create a 
+            signature "mask," which estimates the Jaccard similarity between different reviews.
+            This approach enabled me to process vast amounts of data within remarkably short 
+            time frames.</p>
 
-                <img src="Min_hashing_example.png" class="image">
-            </div>
+            <img src="Min_hashing_example.png" class="image">
+           
+            <h1>SON algorithm</h1>
 
-            <div>
-                <h1>SON algorithm</h1>
-                <p>
-                    The SON algorithm is used to find frequently occurring groups of items in big datasets. 
-                    It works in two steps: first, each node checks its part of the data to find local 
-                    frequent itemsets. Then, the results are combined to find the global frequent itemsets. 
-                    The algorithm is good at handling large datasets and can be used to discover patterns in 
-                    areas like shopping habits and recommendations.
-                </p>
-                <img src="son.png" class="asset">
-            </div>
+            <p>The SON algorithm is used to find frequently occurring groups of items in big datasets. 
+            It works in two steps: first, each node checks its part of the data to find local 
+            frequent itemsets. Then, the results are combined to find the global frequent itemsets. 
+            The algorithm is good at handling large datasets and can be used to discover patterns in 
+            areas like shopping habits and recommendations.</p>
+
+            <img src="son.png" class="asset">
+            
         </div>
 
         <div class="bubbles">

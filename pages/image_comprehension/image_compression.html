@@ -6,6 +6,7 @@
 <body>
 
     <div class="content">
+
         <div class="navbar">
             <ul>
                 <li><a href="../../index.html">Home</a></li>
@@ -20,52 +21,45 @@
 
         <div class="text">
 
-            <div>
-                <h1>K-Means and EM for Image Compression</h1>
-                <P>
-                    Do you have 5,000 pictures on your phone? Do you wish that you could fold, or 
-                    squish them so that you fit more? well we can use some statistical magic to achieve image compression without significant loss in quality.
-                </P>
-            </div>
+            <h1>K-Means and EM for Image Compression</h1>
+            
+            <P>Do you have 5,000 pictures on your phone? Do you wish that you could fold, or squish 
+            them so that you fit more? well we can use some statistical magic to achieve image 
+            compression without significant loss in quality.</P>
+           
+            <h1>How does it work?</h1>
 
-            <div>
-                <h1>How does it work?</h1>
-                <P>
-                    A pixel typically takes up 3 bytes of data: 1 byte for the R, G ,and B values
-                    which make up the color. But the truth is we don't actually need all that space.
-                    Colors are sparse: most of them never get used. Instead of getting 3x256 possible
-                    colors, we can get away with just k colors.
-                </P>
-                <img src="stadium.jpg" class="asset">
-                <img src="k16.jpg" class="asset">
-                <p>
-                    Would you believe that the image on the right is 1,000 times smaller than the
-                    image on the left? Well, it's true: because it uses only 16 colors.
-                </p>
-            </div>
+            <P>A pixel typically takes up 3 bytes of data: 1 byte for the R, G ,and B values
+            which make up the color. But the truth is we don't actually need all that space.
+            Colors are sparse: most of them never get used. Instead of getting 3x256 possible
+            colors, we can get away with just k colors.</P>
 
-            <div>
-                <h1>K Means</h1>
-                <p>We can achieve this by conceptualizing the color domain as a 3D euclidean space<br>
-                where the axes are the color channels:</p>
-                <img src="RGB_plot.png" class="asset">
-                <p>Then we plot all the pixels and use k-means clustering to find k clusters</p>
-                <img src="3d_clustering2.png" class="asset">
-            </div>
+            <img src="stadium.jpg" class="image">
+            <img src="k16.jpg" class="image">
 
-            <div>
-                <h1>EM Algorithm</h1>
-                <p>
-                    to this point, we have assumed that the colors are independent from one another.
-                    that is, it follows k independent normal distributions. However we use the EM
-                    algorithm to account for correlation between the different distributions. The
-                    expectation step will calculate the "responsibility" of each pixel to its cluster,
-                    or the probability that the pixel belongs to each cluster.in the maximization step,
-                    we then update the covariance matrix of the multivariate distribution to maximize the
-                    probability that these pixels exist this way. After iterating the EM steps, we will
-                    account for dependence between color clusters.
-                </p>
-            </div>
+            <p>Would you believe that the image on the right is 1,000 times smaller than the 
+            image on the left? Well, it's true: because it uses only 16 colors.</p>
+            
+            <h1>K Means</h1>
+
+            <p>We can achieve this by conceptualizing the color domain as a 3D euclidean space
+            where the axes are the color channels:</p>
+
+            <img src="RGB_plot.png" class="asset">
+            <p>Then we plot all the pixels and use k-means clustering to find k clusters</p>
+            <img src="3d_clustering2.png" class="asset">
+            
+            <h1>EM Algorithm</h1>
+            
+            <p>to this point, we have assumed that the colors are independent from one another.
+            that is, it follows k independent normal distributions. However we use the EM
+            algorithm to account for correlation between the different distributions. The
+            expectation step will calculate the "responsibility" of each pixel to its cluster,
+            or the probability that the pixel belongs to each cluster.in the maximization step,
+            we then update the covariance matrix of the multivariate distribution to maximize the
+            probability that these pixels exist this way. After iterating the EM steps, we will
+            account for dependence between color clusters.</p>
+            
         </div>
 
         <div class="bubbles">
@@ -81,6 +75,7 @@
 
             </div>
         </div>
+
     </div>
     <script src="../../script.js"></script>
 </body>

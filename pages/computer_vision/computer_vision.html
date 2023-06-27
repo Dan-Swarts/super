@@ -19,109 +19,86 @@
         </div>
 
         <div class="text">
+            <h1>Software Development</h1>
 
-            <div>
-                <h1>Software Development</h1>
-                <p>
-                    This project was a collaborative group effort written in c++. Together me 
-                    and my three parteners made the canny edge detection filter.
-                </p>
-            </div>
+            <p>This project was a collaborative group effort written in c++. Together me 
+            and my three partners made the canny edge detection filter.</p>
+            
+            
+            <h1>Canny Edge Detection: An Overview</h1>
 
-            <div>
-                <h1>Canny Edge Detection: An Overview</h1>
-                <p>
-                    Canny Edge Detection is a sophisticated computer vision algorithm designed 
-                    to extract sharp edges from an image while disregarding other details. The 
-                    algorithm produces the following output:
-                </p>
+            <p>Canny Edge Detection is a sophisticated computer vision algorithm designed 
+            to extract sharp edges from an image while disregarding other details. The 
+            algorithm produces the following output:</p>
 
-                <img src="input.jpg" class="image">
-                <img src="output.jpg" class="image">
-            </div>
+            <img src="input.jpg" class="image">
+            <img src="output.jpg" class="image">
+            
+           
+            <h1>Implementation Details</h1>
 
-            <div>
-                <h1>Implementation Details</h1>
-                <p>
-                    The Canny edge detection algorithm involves applying a series of carefully 
-                    chosen filters that work in tandem to achieve the desired output. These 
-                    filters include:
-                </p>
-                <ul>
-                    <li>
-                        <b>Grayscale Conversion:</b>The grayscale filter transforms a color 
-                        image into grey by converting each pixel's color value into a 
-                        corresponding gray intensity value. This step is crucial because it 
-                        simplifies the image to a single color channel, making it easier to 
-                        detect edges based on intensity variations.
-                    </li>
+            <p>The Canny edge detection algorithm involves applying a series of carefully 
+            chosen filters that work in tandem to achieve the desired output. These 
+            filters include:</p>
 
-                    <li>
-                        <b>Gaussian Blur:</b>The Gaussian blur filter applies a blur to the 
-                        grayscale image using a Gaussian kernel. This blurring process reduces 
-                        noise and smoothens the image, which helps to eliminate small 
-                        fluctuations in intensity that could be mistaken for edges. The amount 
-                        of blurring is controlled by the size of the kernel and the standard 
-                        deviation parameter.
-                    </li>
+            <ul>
+                <li><b>Grayscale Conversion:</b>The grayscale filter transforms a color 
+                image into grey by converting each pixel's color value into a 
+                corresponding gray intensity value. This step is crucial because it 
+                simplifies the image to a single color channel, making it easier to 
+                detect edges based on intensity variations.</li>
 
-                    <li>
-                        <b>Sobel Operator:</b>The Sobel operator is an edge-detection filter 
-                        that calculates the gradient of the grayscale image in both the 
-                        horizontal and vertical directions. It highlights regions of rapid 
-                        intensity changes, representing potential edges. By computing the 
-                        gradient magnitude and direction, the Sobel operator identifies the 
-                        strength and orientation of edges in the image.
-                    </li>
+                <li><b>Gaussian Blur:</b>The Gaussian blur filter applies a blur to the 
+                grayscale image using a Gaussian kernel. This blurring process reduces 
+                noise and smoothens the image, which helps to eliminate small 
+                fluctuations in intensity that could be mistaken for edges. The amount 
+                of blurring is controlled by the size of the kernel and the standard 
+                deviation parameter.</li>
 
-                    <li>
-                        <b>Double Thresholding:</b>Double thresholding is a technique where 
-                        the image is segmented into different intensity regions based on two 
-                        threshold values: a high threshold and a low threshold. Pixels with 
-                        intensity values above the high threshold are considered strong edges,
-                        while those below the low threshold are regarded as non-edges. Pixels 
-                        with values between the two thresholds are classified as weak edges.
-                    </li>
+                <li><b>Sobel Operator:</b>The Sobel operator is an edge-detection filter 
+                that calculates the gradient of the grayscale image in both the 
+                horizontal and vertical directions. It highlights regions of rapid 
+                intensity changes, representing potential edges. By computing the 
+                gradient magnitude and direction, the Sobel operator identifies the 
+                strength and orientation of edges in the image.</li>
 
-                    <li>
-                        <b>Hysteresis Thresholding:</b>Hysteresis thresholding is the final 
-                        step in the Canny edge detection process. It aims to refine the edges 
-                        obtained from double thresholding by connecting and preserving only 
-                        the strong edges while suppressing weak or noisy edges. It achieves 
-                        this by analyzing the connectivity between pixels and determining if 
-                        they form continuous edge contours.
-                    </li>
-                </ul>
-            </div>
+                <li><b>Double Thresholding:</b>Double thresholding is a technique where 
+                the image is segmented into different intensity regions based on two 
+                threshold values: a high threshold and a low threshold. Pixels with 
+                intensity values above the high threshold are considered strong edges,
+                while those below the low threshold are regarded as non-edges. Pixels 
+                with values between the two thresholds are classified as weak edges.</li>
 
-            <div>
-                <h1>Getting Started</h1>
-                <p>
-                    To utilize this code for applying Canny edge detection to your own images, 
-                    follow the steps below:
-                </p>
+                <li><b>Hysteresis Thresholding:</b>Hysteresis thresholding is the final 
+                step in the Canny edge detection process. It aims to refine the edges 
+                obtained from double thresholding by connecting and preserving only 
+                the strong edges while suppressing weak or noisy edges. It achieves 
+                this by analyzing the connectivity between pixels and determining if 
+                they form continuous edge contours.</li>
+            </ul>
+            
+            <h1>Getting Started</h1>
 
-                <ul>
-                    <li>Clone the repository: git clone https://github.com/Dan-Swarts/Canny_Edge_Detection.git</li>
+            <p>To utilize this code for applying Canny edge detection to your own images, 
+            follow the steps below:</p>
 
-                    <li>Compile the code using the provided makefile: make</li>
+            <ul>
+                <li>Clone the repository: git clone https://github.com/Dan-Swarts/Canny_Edge_Detection.git</li>
 
-                    <li>Place your input image in the "images" folder within this repository</li>
+                <li>Compile the code using the provided makefile: make</li>
 
-                    <li>Run the script: ./image_processor input.jpg canny-edge-detect output.jpg</li>
+                <li>Place your input image in the "images" folder within this repository</li>
 
-                    <li>You are free to use any image of your choice</li>
+                <li>Run the script: ./image_processor input.jpg canny-edge-detect output.jpg</li>
 
-                    <li>
-                        Please note that this implementation assumes you have a basic understanding 
-                        of computer vision concepts and have the necessary environment set up to run 
-                        the code. Ensure that the required dependencies are installed and configured 
-                        properly.
-                    </li>
-                </ul>
+                <li>You are free to use any image of your choice</li>
 
-                <p></p>
-            </div>
+                <li>Please note that this implementation assumes you have a basic understanding 
+                of computer vision concepts and have the necessary environment set up to run 
+                the code. Ensure that the required dependencies are installed and configured 
+                properly.</li>
+            </ul>
+            
         </div>
 
         <div class="bubbles">
