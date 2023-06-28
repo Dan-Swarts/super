@@ -33,12 +33,12 @@
             <h1>K-Means and EM for Image Compression</h1>
             
             <P>Do you have 5,000 pictures on your phone? Do you wish that you could fold, or squish 
-            them so that you fit more? well we can use some statistical magic to achieve image 
+            them so that you fit more? Well we can use some statistical magic to achieve image 
             compression without significant loss in quality.</P>
            
             <h1>How does it work?</h1>
 
-            <P>A pixel typically takes up 3 bytes of data: 1 byte for the R, G ,and B values
+            <P>A pixel typically takes up 3 bytes of data: 1 byte for the R, G, and B values
             which make up the color. But the truth is we don't actually need all that space.
             Colors are sparse: most of them never get used. Instead of getting 3x256 possible
             colors, we can get away with just k colors.</P>
@@ -60,8 +60,8 @@
             
             <h1>EM Algorithm</h1>
             
-            <p>to this point, we have assumed that the colors are independent from one another.
-            that is, it follows k independent normal distributions. However we use the EM
+            <p>to this point, we have assumed that the colors are independent of one another.
+            That is, it follows k independent normal distributions. However, we use the EM
             algorithm to account for correlation between the different distributions. The
             expectation step will calculate the "responsibility" of each pixel to its cluster,
             or the probability that the pixel belongs to each cluster.in the maximization step,
@@ -74,7 +74,7 @@
         <div class="bubbles">
             <div>
                 <a href="https://github.com/Dan-Swarts/Image_Compression" target="_blank">
-                    <button type="button"><span></span>See the Code on github</button>
+                    <button type="button"><span></span>See the Code on GitHub</button>
                 </a>
 
                 <a href="../../index.html">
